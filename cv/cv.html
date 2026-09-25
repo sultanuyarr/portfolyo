@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<title>Sultan Uyar — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ── Sayfa ── */
+  @page { size: A4; margin: 10mm 11mm; }
+
+  :root {
+    --ink:    #14181f;
+    --body:   #333a45;
+    --muted:  #6b7583;
+    --accent: #0d7d72;
+    --rule:   #d3dae2;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    font-size: 8.8pt;
+    line-height: 1.34;
+    color: var(--body);
+    background: #fff;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  /* ── Başlık ── */
+  .head {
+    display: flex; align-items: center; gap: 14px;
+    padding-bottom: 7px; margin-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .head img {
+    width: 56px; height: 56px; flex: none;
+    border-radius: 50%; object-fit: cover;
+    border: 1px solid var(--rule);
+  }
+  .head-main { flex: 1; min-width: 0; }
+
+  h1 {
+    font-size: 17.5pt; font-weight: 700; letter-spacing: -.02em;
+    color: var(--ink); line-height: 1.1;
+  }
+  .role {
+    font-size: 9.8pt; font-weight: 600; color: var(--accent);
+    margin-top: 1px; margin-bottom: 5px;
+  }
+  .contact {
+    font-size: 8.3pt; color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: 3px 9px;
+  }
+  .contact span::after { content: '·'; margin-left: 9px; color: var(--rule); }
+  .contact span:last-child::after { content: ''; }
+
+  /* ── Bölüm ── */
+  section { margin-bottom: 6px; }
+  h2 {
+    font-size: 8.6pt; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink);
+    padding-bottom: 2px; margin-bottom: 4.5px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .profil { text-align: justify; }
+
+  /* ── Girdi ── */
+  .entry { margin-bottom: 5px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-top {
+    display: flex; justify-content: space-between;
+    align-items: baseline; gap: 12px;
+  }
+  .entry-title { font-size: 9.6pt; font-weight: 600; color: var(--ink); }
+  .entry-date {
+    font-size: 8.2pt; color: var(--muted); font-weight: 500;
+    white-space: nowrap; flex: none;
+  }
+  .entry-org {
+    font-size: 8.8pt; font-weight: 500; color: var(--accent);
+    margin-bottom: 2px;
+  }
+  .entry p { text-align: justify; }
+
+  /* ── Proje ── */
+  .proj { margin-bottom: 5px; }
+  .proj:last-child { margin-bottom: 0; }
+  .proj-top { display: flex; align-items: baseline; gap: 7px; }
+  .proj-name { font-size: 9.4pt; font-weight: 600; color: var(--ink); }
+  .cat {
+    font-size: 7.1pt; font-weight: 600; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--accent);
+    background: #e6f2f1; border-radius: 3px;
+    padding: 1px 5px; white-space: nowrap; flex: none;
+  }
+  .proj p { text-align: justify; margin-top: 1px; }
+  .tech { color: var(--muted); font-size: 8.2pt; }
+
+  /* ── Beceriler ── */
+  .skills { display: grid; grid-template-columns: 94px 1fr; gap: 2px 10px; }
+  .skills dt {
+    font-size: 8.3pt; font-weight: 600; color: var(--ink);
+  }
+  .skills dd { font-size: 8.7pt; }
+
+  /* ── Alt satır ── */
+  .foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .foot-grid p { font-size: 8.7pt; }
+  strong { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header class="head">
+  <img src="../assets/sultan-uyar.png" alt="" />
+  <div class="head-main">
+    <h1>Sultan Uyar</h1>
+    <p class="role">Yazılım Mühendisi · Backend · Mobil · Veri &amp; Makine Öğrenmesi</p>
+    <div class="contact">
+      <span>sultanuyar04@gmail.com</span>
+      <span>0554 162 04 09</span>
+      <span>İstanbul, Türkiye</span>
+      <span><a href="https://sultanuyar.com.tr">sultanuyar.com.tr</a></span>
+      <span><a href="https://github.com/sultanuyarr">github.com/sultanuyarr</a></span>
+      <span><a href="https://www.linkedin.com/in/sultanuyarr">linkedin.com/in/sultanuyarr</a></span>
+      <span><a href="https://www.kaggle.com/sultanuyar">kaggle.com/sultanuyar</a></span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Profil</h2>
+  <p class="profil">
+    Yazılım Mühendisliği mezunuyum. <strong>C#/.NET</strong>, <strong>Java/Spring Boot</strong> ve
+    <strong>Python/FastAPI</strong> ile RESTful servisler geliştiriyor, bu servisleri <strong>Flutter</strong>
+    ile mobil uygulamalara bağlıyor ve <strong>makine öğrenmesi</strong> tarafında veriden çalışan modeller
+    çıkarıyorum. Test otomasyonuyla %80'in üzerinde kod kapsamı elde ettim; uygulamaları Docker ile
+    konteynerleştirip Linux sunucularına dağıttım. Ölçülebilir ve sürdürülebilir çözümler üretmeye odaklanıyorum.
+  </p>
+</section>
+
+<section>
+  <h2>İş Deneyimi</h2>
+
+  <div class="entry">
+    <div class="entry-top">
+      <span class="entry-title">Yazılım Geliştirme Stajyeri</span>
+      <span class="entry-date">07.2026 – 09.2026 · İstanbul</span>
+    </div>
+    <p class="entry-org">Sampaş Holding</p>
+    <p>
+      C# ve .NET ile test süreçleri yürüttüm. Uygulamaları Docker ile konteynerleştirip SSH üzerinden uzak
+      Linux sunucularına dağıttım; <strong>dağıtım süresi %30 oranında azaldı</strong>. Çevik sprintlere
+      katıldım, haftalık artışlar teslim ettim ve günlük toplantılarda yer aldım.
+    </p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-top">
+      <span class="entry-title">Proje Yönetimi Stajyeri</span>
+      <span class="entry-date">04.2025 – 05.2025 · İstanbul</span>
+    </div>
+    <p class="entry-org">SCA Social</p>
+    <p>
+      Karar verme süreçleri ve strateji geliştirme üzerine çalıştım. Bilişim hukuku kapsamında kişisel
+      verilerin korunması; yapay zekâ–veri bilimi adaptasyonu ile denetimli ve denetimsiz öğrenme
+      yöntemleri hakkında deneyim kazandım.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Projeler</h2>
+
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">PriceGuard</span>
+      <span class="cat">Backend &amp; Mimari</span>
+    </div>
+    <p>
+      Fiyat takibi yapan ve KVKK uyumunu veri katmanında çözen platform. Clean Architecture ile dört katman,
+      MediatR üzerinden CQRS; versiyonlu açık rıza, PII şifreleme ve denetim izi. <strong>139 otomatik test</strong>
+      (82 domain + 57 uygulama/entegrasyon).
+      <span class="tech">.NET 8 · ASP.NET Core · EF Core · PostgreSQL · xUnit · React · Docker</span>
+    </p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">AI Body Scanner</span>
+      <span class="cat">Mobil &amp; Sağlık · TÜBİTAK 2209-A</span>
+    </div>
+    <p>
+      2D fotoğraftan vücut kompozisyonu analizi yapan mobil sağlık uygulamasının backend geliştiricisiyim.
+      MediaPipe tabanlı analiz API'sini geliştirdim, Firebase ile veri katmanını kurdum, Flutter
+      entegrasyonunu ve backend/cihaz testlerini yürüttüm.
+      <span class="tech">Python · FastAPI · MediaPipe · Firebase · Flutter</span>
+    </p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">Süper Lig Tahmin Sistemi</span>
+      <span class="cat">Veri Bilimi &amp; MLOps</span>
+    </div>
+    <p>
+      Veri toplamadan REST API'ye uzanan uçtan uca ML hattı; 33 sezon, 9.900 maç. Sistematik karşılaştırma
+      <strong>basit modelin kazandığını</strong> gösterdi: Elo-lojistik (log loss 0.9733), 87 özellikli
+      LightGBM'i (0.9812) geçti; 10 sezonluk yürüyen pencere backtest'i sonucu doğruladı.
+      <span class="tech">Python · scikit-learn · LightGBM · Optuna · MLflow · FastAPI · Docker</span>
+    </p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">WhatsApp Business Müşteri Hizmetleri Agent'ı</span>
+      <span class="cat">Yapay Zekâ &amp; RAG</span>
+    </div>
+    <p>
+      Türkçe konuşan, araç kullanan müşteri hizmetleri asistanı. Niyet ve duygu sınıflandırmasını LLM yerine
+      lojistik regresyona verdim: <strong>~2 ms</strong> ve sıfır token maliyeti. Şirket politikaları
+      pgvector + tam metin aramayı birleştiren hibrit RAG ile getiriliyor.
+      <span class="tech">Python · FastAPI · n8n · PostgreSQL · pgvector · Redis · scikit-learn</span>
+    </p>
+  </div>
+
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">Geri Bildirimli Duygu Analizi</span>
+      <span class="cat">NLP · Akademik Yayın</span>
+    </div>
+    <p>
+      Engelli bireylerde psikolojik durumun erken tespitine yönelik NLP çalışması. Kaggle veri setlerini
+      TF-IDF ile vektörleştirip Naive Bayes, LSTM ve SVM ile duygu sınıflandırması yaptım;
+      <strong>sonuçlar akademik makaleye dönüştü</strong>.
+      <span class="tech">Python · TF-IDF · Naive Bayes · LSTM · SVM</span>
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Eğitim</h2>
+  <div class="entry">
+    <div class="entry-top">
+      <span class="entry-title">Lisans · Yazılım Mühendisliği</span>
+      <span class="entry-date">09.2022 – 06.2026 · İstanbul</span>
+    </div>
+    <p class="entry-org">Beykent Üniversitesi</p>
+  </div>
+</section>
+
+<section>
+  <h2>Beceriler</h2>
+  <dl class="skills">
+    <dt>Diller</dt>
+    <dd>C#, Java, Python, C++, TypeScript, SQL</dd>
+
+    <dt>Backend</dt>
+    <dd>.NET 8, ASP.NET Core, Spring Boot, Spring Web MVC, FastAPI, REST API, EF Core, CQRS</dd>
+
+    <dt>Mobil &amp; Arayüz</dt>
+    <dd>Flutter, FlutterFlow, React, Next.js, HTML/CSS, Figma, OpenGL</dd>
+
+    <dt>Veri &amp; ML</dt>
+    <dd>scikit-learn, LightGBM, Optuna, MLflow, pandas, LSTM, TF-IDF, MediaPipe, RAG</dd>
+
+    <dt>Veritabanı</dt>
+    <dd>PostgreSQL, MySQL, pgvector, Redis, Firebase</dd>
+
+    <dt>DevOps &amp; Test</dt>
+    <dd>Docker, Kubernetes, CI/CD, Linux, SSH, Git/GitHub, xUnit, JUnit, JaCoCo, pytest</dd>
+  </dl>
+</section>
+
+<div class="foot-grid">
+  <section>
+    <h2>Sertifikalar</h2>
+    <p>
+      Siber Güvenlik Analisti Programı — Akbank (2024) · Yazının Teknoloji Liderleri — Turkcell (2024) ·
+      Teknolojide Fırsat Eşitliği — Yapı Kredi (2024) · Flutter ile Uygulama Geliştirme — Udemy (2025)
+    </p>
+  </section>
+
+  <section>
+    <h2>Diller</h2>
+    <p>Türkçe — Ana dil<br />İngilizce — B2</p>
+  </section>
+</div>
+
+</body>
+</html>

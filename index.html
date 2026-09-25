@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sultan Uyar — Yazılım Mühendisi</title>
+<meta name="description" content="Sultan Uyar — Yazılım Mühendisi. Backend (C#/.NET, Spring Boot, FastAPI), mobil (Flutter) ve veri/makine öğrenmesi tarafında uçtan uca ürün geliştiriyorum." />
+<meta name="author" content="Sultan Uyar" />
+<link rel="canonical" href="https://sultanuyar.com.tr/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sultan Uyar — Yazılım Mühendisi" />
+<meta property="og:description" content="Backend, mobil ve veri tarafında uçtan uca ürün geliştiriyorum: API tasarımı, Flutter uygulamaları ve makine öğrenmesi modelleri." />
+<meta property="og:url" content="https://sultanuyar.com.tr/" />
+<meta property="og:image" content="https://sultanuyar.com.tr/assets/sultan-uyar.png" />
+<meta name="twitter:card" content="summary" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d9488'/><text x='50' y='69' font-size='54' font-family='Georgia,serif' font-weight='700' fill='%23ffffff' text-anchor='middle'>SU</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  // Tema, boyanmadan önce uygulanır (yanıp sönmeyi engeller)
+  try {
+    var t = localStorage.getItem('su-theme');
+    if (t) document.documentElement.dataset.theme = t;
+    else if (window.matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.dataset.theme = 'light';
+  } catch (e) {}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">İçeriğe geç</a>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">SU</span>
+      <span class="brand-text">Sultan Uyar</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Ana menü">
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#deneyim">Deneyim</a>
+      <a href="#projeler">Projeler</a>
+      <a href="#beceriler">Beceriler</a>
+      <a href="#sertifikalar">Sertifikalar</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Temayı değiştir" title="Temayı değiştir">
+        <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.6M12 18.9v2.6M21.5 12h-2.6M5.1 12H2.5M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8M18.7 18.7l-1.8-1.8M7.1 7.1L5.3 5.3"/></svg>
+        <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8z"/></svg>
+      </button>
+      <a class="btn btn-sm btn-primary nav-cta" href="#iletisim">İletişime geç</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> İstanbul, Türkiye · Yeni fırsatlara açık</p>
+        <h1 class="hero-title">
+          Backend, mobil ve veri:<br />
+          <span class="grad">uçtan uca</span><br />
+          ürün geliştiriyorum.
+        </h1>
+        <p class="hero-lead">
+          Yazılım Mühendisliği mezunuyum. <strong>C#/.NET</strong>, <strong>Java/Spring Boot</strong> ve
+          <strong>Python/FastAPI</strong> ile RESTful servisler yazıyor, bu servisleri <strong>Flutter</strong>
+          ile mobil uygulamalara bağlıyor ve <strong>makine öğrenmesi</strong> tarafında veriden çalışan
+          modeller çıkarıyorum. Üçünü birleştiren işleri seviyorum — test otomasyonuyla
+          <strong>%80'in üzerinde kod kapsamı</strong> ve Docker ile tekrarlanabilir dağıtım da işin parçası.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projeler">
+            Projelerimi gör
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12.5 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="assets/Sultan-Uyar-CV.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5v11M7.5 10.5l4.5 4.5 4.5-4.5M4.5 19.5h15"/></svg>
+            CV indir
+          </a>
+        </div>
+
+        <ul class="hero-social" aria-label="Profiller">
+          <li><a href="https://github.com/sultanuyarr" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49l-.01-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.99.85.09-.66.36-1.11.65-1.37-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.81 1.05a9.7 9.7 0 0 1 5.12 0c1.95-1.33 2.8-1.05 2.8-1.05.56 1.41.21 2.45.11 2.71.65.72 1.04 1.63 1.04 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.7.94.7 1.9l-.01 2.81c0 .27.18.6.71.49A10.2 10.2 0 0 0 12 1.8z"/></svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/sultanuyarr" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M6.94 8.7H3.6V20.4h3.34V8.7zM5.27 3.6a1.94 1.94 0 1 0 0 3.87 1.94 1.94 0 0 0 0-3.87zM20.4 20.4h-3.33v-5.7c0-1.36-.03-3.1-1.9-3.1-1.9 0-2.2 1.48-2.2 3v5.8H9.65V8.7h3.2v1.6h.04c.45-.84 1.53-1.73 3.15-1.73 3.37 0 4.36 2.2 4.36 5.07v6.76z"/></svg>
+          </a></li>
+          <li><a href="https://medium.com/@sultanuyar04" target="_blank" rel="noopener noreferrer" title="Medium" aria-label="Medium">
+            <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M6.8 7.2a.7.7 0 0 0-.23-.6L4.85 4.53V4.2h5.35l4.14 9.07L18 4.2h5.1v.33l-1.47 1.41a.43.43 0 0 0-.16.41v10.3c-.02.16.05.32.16.41l1.44 1.41v.33h-7.22v-.33l1.49-1.45c.15-.15.15-.19.15-.42V8.28l-4.15 10.5h-.56L7.95 8.28v7.04c-.4.3.06.6.27.82l1.94 2.35v.33H4.65v-.33l1.94-2.35c.21-.22.3-.53.25-.82V7.2z"/></svg>
+          </a></li>
+          <li><a href="https://www.kaggle.com/sultanuyar" target="_blank" rel="noopener noreferrer" title="Kaggle" aria-label="Kaggle">
+            <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M15.7 20.4l-5.03-6.28-1.4 1.35v4.6c0 .2-.1.33-.33.33H6.4c-.22 0-.33-.13-.33-.33V3.93c0-.2.11-.33.33-.33h2.54c.22 0 .33.13.33.33v8.2l5.1-5.15c.14-.14.29-.2.48-.2h3.3c.2 0 .3.08.33.23.03.15 0 .27-.1.36l-5.38 5.2 5.6 7.4c.08.13.1.26.05.38-.05.1-.16.16-.31.16h-2.8c-.2 0-.36-.08-.48-.2z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait">
+          <div class="portrait-ring" aria-hidden="true"></div>
+          <img src="assets/sultan-uyar.png" alt="Sultan Uyar" width="512" height="512" />
+        </div>
+        <div class="badge-card">
+          <span class="badge-k">TÜBİTAK</span>
+          <span class="badge-v">2209-A destekli proje</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="stats" id="stats">
+        <div class="stat"><dt>Öne çıkan proje</dt><dd><span class="count" data-to="10">0</span></dd></div>
+        <div class="stat"><dt>Otomatik test · PriceGuard</dt><dd><span class="count" data-to="139">0</span></dd></div>
+        <div class="stat"><dt>Kod kapsamı · JaCoCo</dt><dd><span class="count" data-to="80">0</span><span class="suffix">%+</span></dd></div>
+        <div class="stat"><dt>Dağıtım süresinde azalma</dt><dd><span class="count" data-to="30">0</span><span class="suffix">%</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ HAKKIMDA ══════════ -->
+  <section class="section" id="hakkimda">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2>Hakkımda</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">
+            Beykent Üniversitesi Yazılım Mühendisliği mezunuyum. Üç alanda çalışmayı seviyorum ve
+            bunları birbirinden ayrı görmüyorum: <strong>backend</strong> tarafında API tasarımı ve iş
+            kurallarının doğru katmanda yaşaması, <strong>mobil</strong> tarafında bu servislerin
+            kullanıcının eline ulaşması, <strong>veri</strong> tarafında ise ölçülebilir sonuç üreten
+            modeller. AI Body Scanner tam olarak bu üçünün kesiştiği yerde duruyor: MediaPipe tabanlı
+            analiz API'si, Firebase veri katmanı ve Flutter arayüzü.
+          </p>
+          <p>
+            SAMPAŞ Holding'deki stajımda C# ve .NET ile test süreçleri yürüttüm, uygulamaları Docker ile
+            konteynerleştirip SSH üzerinden uzak Linux sunucularına dağıttım — bu, dağıtım süresini
+            %30 oranında kısalttı. Çevik sprintlerde haftalık artışlar teslim ettim. Mobil tarafta
+            Flutter ve FlutterFlow ile çalışıyor, veri tarafında Kaggle üzerinde NLP çalışmaları
+            yürütüyorum.
+          </p>
+          <p>
+            Ortak paydam, yazdığım şeyin kanıtlanabilir olması. Projelerimde birim, entegrasyon,
+            regresyon ve uçtan uca testleri birlikte kurguluyor; Clean Architecture ve CQRS gibi
+            desenleri gerçekten karmaşıklığı azalttıkları yerde kullanıyorum. Makine öğrenmesi
+            tarafında da aynı refleks geçerli: metriğe bakıp <em>basit olanın kazandığını</em>
+            kabul etmeyi öğrendim.
+          </p>
+
+          <ul class="fact-list">
+            <li><span>Konum</span><strong>İstanbul, Türkiye</strong></li>
+            <li><span>Eğitim</span><strong>Beykent Üniversitesi · Yazılım Mühendisliği</strong></li>
+            <li><span>İngilizce</span><strong>B2</strong></li>
+            <li><span>İlgi alanları</span><strong>Backend · Mobil · Veri &amp; makine öğrenmesi</strong></li>
+            <li><span>Durum</span><strong>Yeni fırsatlara açık</strong></li>
+          </ul>
+        </div>
+
+        <aside class="about-side">
+          <h3 class="side-title">Çalışma ilkelerim</h3>
+          <ol class="principles">
+            <li>
+              <h4>Test yazılmamış özellik bitmemiştir</h4>
+              <p>Kapsam bir rozet değil, değişiklik yapabilme cesareti.</p>
+            </li>
+            <li>
+              <h4>İş kuralı tek yerde yaşar</h4>
+              <p>Kurallar domain modelinde; işleyiciler yalnızca orkestrasyon yapar.</p>
+            </li>
+            <li>
+              <h4>Ölçmeden karmaşıklık ekleme</h4>
+              <p>87 özellikli model, dört özellikli modeli yenemiyorsa sade olan sevk edilir.</p>
+            </li>
+            <li>
+              <h4>Dağıtım sıkıcı olmalı</h4>
+              <p>Docker, CI/CD ve betikler; el yordamıyla yapılan her adım bir hata adayıdır.</p>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DENEYİM ══════════ -->
+  <section class="section alt" id="deneyim">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2>Deneyim &amp; Eğitim</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-marker" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p class="tl-date">07.2026 — 09.2026 · İstanbul</p>
+            <h3>Yazılım Geliştirme Stajyeri</h3>
+            <p class="tl-org">SAMPAŞ Holding</p>
+            <p>
+              C# ve .NET ile test süreçleri uyguladım. Uygulamaları Docker ile konteynerleştirip SSH
+              üzerinden uzak Linux sunucularına dağıttım; bu sayede dağıtım süresi %30 oranında azaldı.
+              Çevik sprintlere katıldım, haftalık artışlar teslim ettim ve günlük toplantılarda yer aldım.
+            </p>
+            <ul class="chips">
+              <li>C#</li><li>.NET</li><li>Docker</li><li>Linux</li><li>SSH</li><li>Agile</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-marker" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p class="tl-date">04.2025 — 05.2025 · İstanbul</p>
+            <h3>Proje Yönetimi Stajyeri</h3>
+            <p class="tl-org">SCA Social</p>
+            <p>
+              Karar verme süreçleri ve strateji geliştirme üzerine çalıştım. Bilişim hukuku kapsamında
+              kişisel verilerin korunması; yapay zekâ ve veri bilimi adaptasyonu ile denetimli/denetimsiz
+              öğrenme yöntemleri hakkında deneyim kazandım.
+            </p>
+            <ul class="chips">
+              <li>Proje yönetimi</li><li>KVKK</li><li>Veri bilimi</li><li>Strateji</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="tl-item edu">
+          <div class="tl-marker" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p class="tl-date">09.2022 — 06.2026 · İstanbul</p>
+            <h3>Lisans · Yazılım Mühendisliği</h3>
+            <p class="tl-org">Beykent Üniversitesi</p>
+            <p>
+              Yazılım geliştirme, veri yapıları, veritabanı sistemleri, mobil programlama ve veri analizi
+              üzerine eğitim aldım. Bitirme çalışmalarım backend servisleri ve makine öğrenmesi
+              uygulamaları üzerine yoğunlaştı.
+            </p>
+          </div>
+        </li>
+
+        <li class="tl-item edu">
+          <div class="tl-marker" aria-hidden="true"></div>
+          <div class="tl-body">
+            <p class="tl-date">Lise · Sayısal Bölümü</p>
+            <h3>Beşir Balcıoğlu Anadolu Lisesi</h3>
+            <p>
+              Matematik, fizik ve bilgisayar bilimleri alanlarında temel eğitim; analitik düşünce ve
+              problem çözme becerilerine odaklandım.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJELER ══════════ -->
+  <section class="section" id="projeler">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2>Projeler</h2>
+        <p class="sec-sub">Ürettiğim işlerden bir seçki — mimari kararların ve ölçülen sonuçların öne çıktığı projeler.</p>
+      </div>
+
+      <div class="filters" id="filters" role="tablist" aria-label="Proje filtresi">
+        <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Tümü</button>
+        <button class="filter" data-filter="backend" role="tab" aria-selected="false">Backend</button>
+        <button class="filter" data-filter="ai" role="tab" aria-selected="false">Yapay Zekâ &amp; ML</button>
+        <button class="filter" data-filter="web" role="tab" aria-selected="false">Web &amp; Mobil</button>
+      </div>
+
+      <div class="projects" id="projects"><!-- app.js dolduruyor --></div>
+
+      <p class="projects-note">
+        Depoların tamamı
+        <a href="https://github.com/sultanuyarr" target="_blank" rel="noopener noreferrer">github.com/sultanuyarr</a>
+        adresinde.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ BECERİLER ══════════ -->
+  <section class="section alt" id="beceriler">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <h2>Beceriler</h2>
+      </div>
+
+      <div class="skills">
+        <article class="skill-card">
+          <h3><span class="sk-ic">&lt;/&gt;</span> Diller</h3>
+          <ul class="chips lg"><li>C#</li><li>Java</li><li>Python</li><li>C++</li><li>TypeScript</li><li>SQL</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">⌘</span> Backend &amp; API</h3>
+          <ul class="chips lg"><li>.NET 8</li><li>ASP.NET Core</li><li>Spring Boot</li><li>Spring Web MVC</li><li>FastAPI</li><li>REST API</li><li>EF Core</li><li>MediatR / CQRS</li><li>Clean Architecture</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">◈</span> Veri</h3>
+          <ul class="chips lg"><li>PostgreSQL</li><li>MySQL</li><li>PL/SQL</li><li>pgvector</li><li>Redis</li><li>Prisma</li><li>Firebase</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">⟳</span> DevOps</h3>
+          <ul class="chips lg"><li>Docker</li><li>Docker Compose</li><li>Kubernetes</li><li>CI/CD</li><li>Linux</li><li>SSH</li><li>Git / GitHub</li><li>n8n</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">✓</span> Test</h3>
+          <ul class="chips lg"><li>xUnit</li><li>FluentAssertions</li><li>JUnit</li><li>JaCoCo</li><li>pytest</li><li>Entegrasyon testi</li><li>E2E &amp; regresyon</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">◐</span> Yapay Zekâ &amp; ML</h3>
+          <ul class="chips lg"><li>scikit-learn</li><li>LightGBM</li><li>Optuna</li><li>MLflow</li><li>LSTM</li><li>TF-IDF</li><li>MediaPipe</li><li>RAG</li><li>Weka</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">◻</span> Mobil &amp; Arayüz</h3>
+          <ul class="chips lg"><li>Flutter</li><li>FlutterFlow</li><li>Dart</li><li>Android / iOS</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>HTML / CSS / JS</li><li>Streamlit</li><li>OpenGL</li></ul>
+        </article>
+
+        <article class="skill-card">
+          <h3><span class="sk-ic">◔</span> Araçlar</h3>
+          <ul class="chips lg"><li>Figma</li><li>Jupyter</li><li>PyCharm</li><li>Postman</li><li>Swagger</li><li>Google Cloud</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SERTİFİKALAR ══════════ -->
+  <section class="section" id="sertifikalar">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">05</span>
+        <h2>Sertifikalar</h2>
+      </div>
+
+      <div class="certs">
+        <article class="cert">
+          <span class="cert-ic" aria-hidden="true">🛡️</span>
+          <div>
+            <h3>Siber Güvenlik Analisti Programı</h3>
+            <p class="cert-meta">Akbank · 2024</p>
+            <p>Siber güvenlik tehditleri, analiz teknikleri ve güvenlik protokolleri.</p>
+          </div>
+        </article>
+
+        <article class="cert">
+          <span class="cert-ic" aria-hidden="true">🚀</span>
+          <div>
+            <h3>Yazının Teknoloji Liderleri</h3>
+            <p class="cert-meta">Turkcell · 2024</p>
+            <p>Teknoloji liderliği, inovasyon ve gelişmiş teknoloji üzerine kapsamlı program.</p>
+          </div>
+        </article>
+
+        <article class="cert">
+          <span class="cert-ic" aria-hidden="true">⚖️</span>
+          <div>
+            <h3>Teknolojide Fırsat Eşitliği</h3>
+            <p class="cert-meta">Yapı Kredi · 2024</p>
+            <p>Teknoloji sektöründe fırsat eşitliği, çeşitlilik ve kapsayıcılık.</p>
+          </div>
+        </article>
+
+        <article class="cert">
+          <span class="cert-ic" aria-hidden="true">📱</span>
+          <div>
+            <h3>Flutter ile Uygulama Geliştirme</h3>
+            <p class="cert-meta">Udemy · 2025</p>
+            <p>Android &amp; iOS için cross-platform mobil uygulama geliştirme.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ İLETİŞİM ══════════ -->
+  <section class="section alt" id="iletisim">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">06</span>
+        <h2>İletişim</h2>
+        <p class="sec-sub">Backend, mobil veya veri tarafındaki pozisyonlar, iş birlikleri ve projelerim hakkında sorularınız için yazabilirsiniz.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a class="ccard" href="mailto:sultanuyar04@gmail.com">
+            <span class="ccard-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="4.8" width="18.4" height="14.4" rx="2.4"/><path d="M3.4 6.6L12 12.8l8.6-6.2"/></svg></span>
+            <span class="ccard-k">E-posta</span>
+            <span class="ccard-v">sultanuyar04@gmail.com</span>
+          </a>
+          <a class="ccard" href="https://medium.com/@sultanuyar04" target="_blank" rel="noopener noreferrer">
+            <span class="ccard-ic"><svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M6.8 7.2a.7.7 0 0 0-.23-.6L4.85 4.53V4.2h5.35l4.14 9.07L18 4.2h5.1v.33l-1.47 1.41a.43.43 0 0 0-.16.41v10.3c-.02.16.05.32.16.41l1.44 1.41v.33h-7.22v-.33l1.49-1.45c.15-.15.15-.19.15-.42V8.28l-4.15 10.5h-.56L7.95 8.28v7.04c-.4.3.06.6.27.82l1.94 2.35v.33H4.65v-.33l1.94-2.35c.21-.22.3-.53.25-.82V7.2z"/></svg></span>
+            <span class="ccard-k">Medium</span>
+            <span class="ccard-v">@sultanuyar04</span>
+          </a>
+          <a class="ccard" href="https://www.linkedin.com/in/sultanuyarr" target="_blank" rel="noopener noreferrer">
+            <span class="ccard-ic"><svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M6.94 8.7H3.6V20.4h3.34V8.7zM5.27 3.6a1.94 1.94 0 1 0 0 3.87 1.94 1.94 0 0 0 0-3.87zM20.4 20.4h-3.33v-5.7c0-1.36-.03-3.1-1.9-3.1-1.9 0-2.2 1.48-2.2 3v5.8H9.65V8.7h3.2v1.6h.04c.45-.84 1.53-1.73 3.15-1.73 3.37 0 4.36 2.2 4.36 5.07v6.76z"/></svg></span>
+            <span class="ccard-k">LinkedIn</span>
+            <span class="ccard-v">/in/sultanuyarr</span>
+          </a>
+          <a class="ccard" href="https://github.com/sultanuyarr" target="_blank" rel="noopener noreferrer">
+            <span class="ccard-ic"><svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M12 1.8a10.2 10.2 0 0 0-3.23 19.88c.51.1.7-.22.7-.49l-.01-1.9c-2.84.62-3.44-1.2-3.44-1.2-.47-1.18-1.14-1.5-1.14-1.5-.93-.63.07-.62.07-.62 1.03.07 1.57 1.06 1.57 1.06.91 1.57 2.4 1.12 2.99.85.09-.66.36-1.11.65-1.37-2.27-.26-4.66-1.14-4.66-5.06 0-1.12.4-2.03 1.05-2.75-.1-.26-.45-1.3.1-2.71 0 0 .86-.28 2.81 1.05a9.7 9.7 0 0 1 5.12 0c1.95-1.33 2.8-1.05 2.8-1.05.56 1.41.21 2.45.11 2.71.65.72 1.04 1.63 1.04 2.75 0 3.93-2.39 4.8-4.67 5.05.37.32.7.94.7 1.9l-.01 2.81c0 .27.18.6.71.49A10.2 10.2 0 0 0 12 1.8z"/></svg></span>
+            <span class="ccard-k">GitHub</span>
+            <span class="ccard-v">@sultanuyarr</span>
+          </a>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3>Mesaj gönder</h3>
+          <p class="form-note">Form, varsayılan e-posta uygulamanızı hazır bir mesajla açar.</p>
+
+          <div class="field">
+            <label for="cf-name">Ad Soyad</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Adınız" />
+          </div>
+          <div class="field">
+            <label for="cf-email">E-posta</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="ornek@eposta.com" />
+          </div>
+          <div class="field">
+            <label for="cf-msg">Mesajınız</label>
+            <textarea id="cf-msg" name="message" rows="5" required placeholder="Nasıl yardımcı olabilirim?"></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit">
+            Gönder
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h13M11.5 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Sultan Uyar · İstanbul</p>
+    <nav class="footer-links" aria-label="Profiller">
+      <a href="https://github.com/sultanuyarr" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/sultanuyarr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://medium.com/@sultanuyar04" target="_blank" rel="noopener noreferrer">Medium</a>
+      <a href="https://www.kaggle.com/sultanuyar" target="_blank" rel="noopener noreferrer">Kaggle</a>
+    </nav>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Yukarı çık">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 11.5l6-6 6 6"/></svg>
+</button>
+
+<script src="app.js"></script>
+</body>
+</html>
