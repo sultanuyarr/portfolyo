@@ -79,7 +79,7 @@ Statik olduğu için her yerde çalışır:
 - **Netlify / Vercel** — klasörü sürükle bırak; derleme komutu yok, yayın klasörü kök
 - **cPanel / paylaşımlı hosting** — dosyaları `public_html` içine kopyala
 
-`sultanuyar.com.tr` alan adına alırken `index.html`, `styles.css`, `app.js` ve
+`sultanuyar.com` alan adına alırken `index.html`, `styles.css`, `app.js` ve
 `assets/` klasörünün aynı dizinde kalmasına dikkat et.
 
 ## Notlar
